@@ -1,0 +1,1 @@
+Put your own trained generator.pth models in this directory.

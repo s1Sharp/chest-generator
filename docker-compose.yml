@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  app:
+    build: ./
+    container_name: chest-generator
+    image: s1sharp/chest-generator
+    ports:
+      - 5000:5000
+    environment:
+          - APP_VERSION_ENV=release
+    restart: on-failure
+    command: "python web_app/app.py $APP_VERSION_ENV"
